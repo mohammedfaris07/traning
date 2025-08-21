@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Operations</title>
+</head>
+
+<body>
+    <script>
+        let numbers = [10, 5, 8, 3, 12, 6];
+        console.log("Length of array:", numbers.length);
+        numbers.push(7);
+        numbers.pop();
+        console.log(numbers)
+        numbers.sort();
+        console.log(numbers)
+        numbers.reverse();
+        console.log(numbers)
+        console.log(numbers.includes(8) ? "Number 8 exists" : "Number 8 doesn't exist");
+
+        const i = numbers.indexOf(12);
+        console.log("Index of number 12:", i);
+
+        const doubledNumbers = numbers.map(num => num * 2);
+        console.log("Doubled numbers array:", doubledNumbers);
+
+    </script>
+</body>
+
+</html>
