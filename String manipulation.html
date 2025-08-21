@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Manipulation</title>
+</head>
+
+<body>
+    <script>
+        const names = ["John", "Jane", "Doe", "Alice", "Bob"];
+        names.forEach(name => console.log(name));
+        names.push("Eve");
+        const index = names.indexOf("Doe");
+        names.splice(index, 1);
+        names.sort();
+        console.log(names.includes("Alice") ? "Alice is present" : "Alice is not present");
+        const uppercaseNames = names.map(name => name.toUpperCase());
+        console.log(uppercaseNames);
+    </script>
+</body>
+
+</html>
