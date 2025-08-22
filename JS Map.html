@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Map</title>
+</head>
+
+<body>
+    <script>
+        const data = new Map([
+            ["apples", 500],
+            ["banana", 300],
+            ["oranges", 400]
+        ])
+        data.set("mango", 200) // update
+        data.delete("banana", 300) // delete
+        data.get("oranges", 400) // access
+        console.log(data)
+    </script>
+</body>
+
+</html>
