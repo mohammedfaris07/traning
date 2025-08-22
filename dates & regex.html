@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dates & Regex</title>
+</head>
+<body>
+    <script>
+        // createing date => Date()
+        const currentDate = new Date()
+        console.log(currentDate)
+        
+        // specific date 
+        const specificDate = new Date('2025-08-22T12:50:00');
+        console.log(specificDate)
+
+        //using milisec 
+        const milisec = new Date(12895614000000)
+        console.log(milisec)
+
+        // access date
+        const date = new Date()
+        const year = date.getFullYear();
+        const month = date.getMonth();
+        const hour = date.getHours();
+        const min = date.getMinutes();
+        const sec = date.getSeconds();
+        console.log(date)
+        console.log(year)
+        console.log(month)
+        console.log(hour)
+        console.log(min)
+        console.log(sec)
+
+        // format
+        const formatDate = date.toLocaleDateString('en-US') 
+        console.log(formatDate)
+
+        // mainpulate date
+        date.setDate(date.getDate() + 7)
+
+        // compare date
+        const date1 = new Date('2025-08-22');
+        const date2 = new Date('2024-08-22');
+        if(date1 < date2) {
+            console.log("date 1 is eariler than date 2")
+        }
+
+        // Regex /
+
+        let pattern = /dog/;
+        let string = "I have dog and cat"
+        console.log(pattern.test(string))
+
+        let pattern1 = /\b[cC]\w+/g
+        string = "Cat and dog is pet animals. Cow is also another pet animal."
+        console.log(string.match(pattern1))
+        
+        let patt = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+[a-zA-z]{2,}$/
+        string2 = "myemail@gmail.com"
+        console.log(patt.test(string2))
+    </script>
+</body>
+</html>
