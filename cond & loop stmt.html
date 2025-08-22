@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditional & Looping Statements</title>
+</head>
+
+<body>
+    <script>
+        // Conditional Statement
+        // if stmt
+        let num = 10;
+        if (num > 0) {
+            console.log("number is positive")
+        }
+
+        // if else stmt
+        let num2 = -10;
+        if (num2 > 0) {
+            console.log("number is positive")
+        } else {
+            console.log("number is negative")
+        }
+
+        // if else if else
+        let num3 = -15;
+        if (num2 > 0) {
+            console.log("number is positive")
+        } else if (num3 == 0) {
+            console.log("number is zero")
+        } else {
+            console.log("number is negative")
+        }
+
+        // switch stmt
+        function weekDay(day) {
+            switch (day) {
+                case 1:
+                    console.log("Today is Monday")
+                    break;
+                case 2:
+                    console.log("Today is Tuesday")
+                    break;
+                case 3:
+                    console.log("Today is Wednesday")
+                    break;
+                case 4:
+                    console.log("Today is Thursday")
+                    break;
+                case 5:
+                    console.log("Today is Friday")
+                    break;
+                case 6:
+                    console.log("Today is Saturday")
+                    break;
+                case 7:
+                    console.log("Today is Sunday")
+                    break
+                default:
+                    console.log("Invalid Day")
+            }
+        }
+        weekDay(5); // friday
+        weekDay(); // invalid day
+
+        // Looping Statement
+        // for loop
+        for (let i = 1; i <= 5; i++) {
+            console.log(i)
+        }
+
+        // for in loop
+        const person = { f_name: "jhon", age: 23 }
+        for (const key in person) {
+            console.log(key + ": " + person[key])
+        }
+
+        // for of loop
+        const colors = ["red", "green", "blue"]
+        for (const eachColor of colors) {
+            console.log(eachColor)
+        }
+
+        // while loop
+        let count = 8;
+        while (count < 5) {
+            console.log(count)
+            count++
+        }
+
+        // do while loop
+        let numb = 0
+        do {
+            console.log(numb)
+            numb++
+        } while (numb < 3)
+    </script>
+</body>
+
+</html>
