@@ -1,13 +1,10 @@
-// Mobile menu toggle functionality
 document.addEventListener("DOMContentLoaded", function () {
   const mobileMenuBtn = document.querySelector(".mobile-menu-btn");
   const navMenu = document.querySelector(".nav-menu");
 
-  // Toggle menu on button click
   mobileMenuBtn.addEventListener("click", function () {
     navMenu.classList.toggle("active");
 
-    // Change icon based on menu state
     const icon = mobileMenuBtn.querySelector("i");
     if (navMenu.classList.contains("active")) {
       icon.classList.remove("fa-bars");
@@ -18,7 +15,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // Close menu when clicking outside
   document.addEventListener("click", function (event) {
     if (
       !event.target.closest(".nav-menu") &&
@@ -31,7 +27,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // Close menu when a link is clicked
   const navLinks = document.querySelectorAll(".nav-menu a");
   navLinks.forEach((link) => {
     link.addEventListener("click", function () {
@@ -42,7 +37,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Add scroll effect to header
   window.addEventListener("scroll", function () {
     const header = document.querySelector("header");
     if (window.scrollY > 50) {
